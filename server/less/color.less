@@ -1,0 +1,21 @@
+@main: #29B6F6;
+@grey: #AAAAAA;
+
+// Iterate through background colours
+.main-colors();
+.main-colors(@i: 5) when (@i > 0) {
+	@percent: percentage((@i - 3) / 10);
+	.main-b@{i} {
+		background-color: darken(@main, @percent);
+	}
+	.main-c@{i} {
+		color: darken(@main, @percent);
+	}
+	.grey-b@{i} {
+		background-color: darken(@grey, @percent);
+	}
+	.grey-c@{i} {
+		color: darken(@grey, @percent);
+	}
+	.main-colors(@i - 1);
+}

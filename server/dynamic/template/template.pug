@@ -1,0 +1,29 @@
+doctype html
+
+html
+	head
+		if title
+			title #{title} - #{name}
+		else
+			title #{name}
+		link(rel="stylesheet" href="/less/index.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons")
+		link(rel="icon" href="favicon.png")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body
+		nav.main-b3
+			a(href="#" onclick="toggleNav()")
+				i.material-icons menu
+			.title
+				a(href="/"): h1 #{name}
+		main
+			block content
+		footer.main-b4
+			p Copyright 2015 - 2018, Moustacheminer Server Services
+			p Unless stated, all content within this website is not licenced, and is under the public domain. The "#{name}" software is licenced under the MIT Licence.
+				a(href="https://github.com/moustacheminer/compdocs") View on GitHub here.
+		#sidedarken(onclick="toggleNav()")
+		#sidenav
+			for site in sitemap
+				a(href=site.url) #{Array(site.indent).join(' ') + site.name}
+		script(src="/js/nav.js")

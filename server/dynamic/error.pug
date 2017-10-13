@@ -1,0 +1,9 @@
+extends template/template.pug
+
+block content
+	.container
+		h1 #{status}
+		h2 The following errors occured:
+		for error in message
+			p #{error}
+		a(href="/") Go home

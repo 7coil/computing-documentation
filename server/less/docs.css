@@ -1,0 +1,72 @@
+body {
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', 'Noto Sans', 'Ubuntu', 'Arial', sans-serif;
+}
+
+nav {
+	position: sticky;
+	top: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+	box-shadow: 0px 2px 2px #AAAAAA;
+}
+
+nav * {
+    padding: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+	display: inline-block;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active,
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+main {
+    padding: 10px;
+    flex: 1 0 auto;
+}
+
+footer {
+    padding: 10px;
+	color: #FFFFFF;
+}
+
+footer p {
+	margin: 0px;
+}
+
+.title {
+	margin-left: auto;
+	text-align: right;
+}
+
+th, td {
+	padding: 5px;
+}
+
+thead tr {
+	background-color: #CCCCCC;
+}
+
+tbody tr {
+	background-color: #EEEEEE;
+}
+
+.noscroll {
+    position: fixed;
+	overflow-y: scroll;
+    width: 100%
+}
+
+.scroll {
+    position: static;
+    overflow-y: auto;
+}
