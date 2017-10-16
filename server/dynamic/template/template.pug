@@ -20,10 +20,10 @@ html
 			block content
 		footer.main-b4
 			p Copyright 2015 - 2018, Moustacheminer Server Services
-			p Unless stated, all content within this website is not licenced, and is under the public domain. The "#{name}" software is licenced under the MIT Licence.
-            a(href="https://gitlab.mss.ovh/7coil/Computing-Documentation") View on GitLab here.
+			p Unless stated, all content within this website is not licenced, and is under the public domain.
+			p The "#{name}" software is licenced under the MIT Licence.
 		#sidedarken(onclick="toggleNav()")
 		#sidenav
 			for site in sitemap
-				a(href=site.url) #{Array(site.indent).join(' ') + site.name}
+				a(href=site.url class=`indent${site.indent}`) #{site.name}
 		script(src="/js/nav.js")
