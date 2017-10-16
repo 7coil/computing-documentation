@@ -10,6 +10,8 @@ html
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons")
 		link(rel="icon" href="favicon.png")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		script(async src="/js/nav.js")
+		script(async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML")
 	body
 		nav.main-b3
 			a(href="#" onclick="toggleNav()")
@@ -26,4 +28,3 @@ html
 		#sidenav
 			for site in sitemap
 				a(href=site.url class=`indent${site.indent}`) #{site.name}
-		script(src="/js/nav.js")
