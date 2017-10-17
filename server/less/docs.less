@@ -1,25 +1,26 @@
 body {
-    margin: 0px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', 'Noto Sans', 'Ubuntu', 'Arial', sans-serif;
+	margin: 0px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', 'Noto Sans', 'Ubuntu', 'Arial', sans-serif;
 }
 
 nav {
 	position: sticky;
 	top: 0px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
 	box-shadow: 0px 2px 2px #AAAAAA;
+	z-index: 1000;
 }
 
 nav * {
-    padding: 0px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 5px;
+	padding: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 5px;
 	display: inline-block;
 }
 
@@ -30,12 +31,12 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
 }
 
 main {
-    padding: 10px;
-    flex: 1 0 auto;
+	padding: 10px;
+	flex: 1 0 auto;
 }
 
 footer {
-    padding: 10px;
+	padding: 10px;
 	color: #FFFFFF;
 }
 
@@ -49,22 +50,40 @@ footer p {
 }
 
 .noscroll {
-    position: fixed;
+	position: fixed;
 	overflow-y: scroll;
-    width: 100%
+	width: 100%
 }
 
 .scroll {
-    position: static;
-    overflow-y: auto;
+	position: static;
+	overflow-y: auto;
 }
 
 .infobox {
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-.infobox * {
-    margin: 0px;
+.infobox > * {
+	margin-top: 5px;
+    margin-bottom: 5px;
+	margin-left: 5px;
+    margin-right: 5px;
+}
+
+.imgbox {
+	float: right;
+	margin-left: 5px;
+}
+
+.imgbox > img {
+	width: 10em;
+}
+
+.imgbox > p {
+	width: 10em;
+	font-style: italic;
+	text-align: right;
 }
