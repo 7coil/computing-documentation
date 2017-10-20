@@ -1,13 +1,23 @@
 console.log('Welcome to Moustacheminer Server Services!');
 
+const i18n = require('i18n');
+const path = require('path');
 const config = require('config');
 const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const expressLess = require('express-less');
 const docsRouter = require('./docs');
+const localesRouter = require('./locales');
+const expressLess = require('express-less');
+const cookieParser = require('cookie-parser');
 
 const app = express();
+
+i18n.configure({
+	directory: path.join(__dirname, 'locales'),
+	cookie: 'lang',
+	defaultLocale: 'en-gb',
+	autoReload: true,
+	updateFiles: false
+});
 
 app.locals.name = config.get('name');
 app.locals.sitemap = require('./sitemap.json').website;
@@ -17,14 +27,9 @@ app.enable('trust proxy')
 	.set('views', path.join(__dirname, '/dynamic'))
 	.set('view engine', 'pug')
 	.use(cookieParser())
-	.use('/docs/', docsRouter)
-	.use('/theme/:type', (req, res) => {
-		res.cookie('theme', req.params.type, {
-			maxAge: 900000,
-			httpOnly: true
-		});
-		res.redirect('/');
-	})
+	.use(i18n.init)
+	.use('/locales', localesRouter)
+	.use('/docs', docsRouter)
 	.use('/less', expressLess(path.join(__dirname, 'less')))
 	.get('/', (req, res) => {
 		res.render('index.pug');
