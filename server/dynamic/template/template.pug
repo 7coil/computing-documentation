@@ -3,27 +3,28 @@ doctype html
 html
 	head
 		if title
-			title #{title} - #{name}
+			title #{title} - #{__('name')}
 		else
-			title #{name}
+			title #{__('name')}
 		link(rel="stylesheet" href="/less/index.css")
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons")
 		link(rel="icon" href="favicon.png")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		script(async src="/js/nav.js")
 		script(async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML")
+		script(async src="/js/mathjax.js")
 	body
 		nav.main-b3
 			a(href="#" onclick="toggleNav()")
 				i.material-icons menu
 			.title
-				a(href="/"): h1 #{name}
+				a(href="/"): h1 #{__('name')}
 		main
 			block content
 		footer.main-b4
 			p Copyright 2015 - 2018, Moustacheminer Server Services
 			p Unless stated, all content within this website is not licenced, and is under the public domain.
-			p The "#{name}" software is licenced under the MIT Licence.
+			p The "#{__('name')}" software is licenced under the MIT Licence.
 		#sidedarken(onclick="toggleNav()")
 		#sidenav
 			for site in sitemap

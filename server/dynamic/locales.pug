@@ -7,4 +7,4 @@ block content
 		p: a(href="https://ico.org.uk/for-the-public/online/cookies/") Information about Cookies
 		ul
 			for language in languages
-				li: a(href=`/locales/${language}`) #{language.name}
+				li: a(href=`/locales/${language}`) #{__(`lang_${language}`)}

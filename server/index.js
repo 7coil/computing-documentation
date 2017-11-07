@@ -19,7 +19,6 @@ i18n.configure({
 	updateFiles: false
 });
 
-app.locals.name = config.get('name');
 app.locals.sitemap = require('./sitemap.json').website;
 
 // Middleware
@@ -32,10 +31,10 @@ app.enable('trust proxy')
 	.use('/docs', docsRouter)
 	.use('/less', expressLess(path.join(__dirname, 'less')))
 	.get('/', (req, res) => {
-		res.render('index.pug');
+		res.render('index');
 	})
 	.use(express.static(path.join(__dirname, '/static')))
-	.use('*', (req, res) => res.status(404).render('error.pug', {
+	.use('*', (req, res) => res.status(404).render('error', {
 		status: 404,
 		message: [
 			'Not found'

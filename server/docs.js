@@ -4,8 +4,6 @@ const marked = require('marked');
 const express = require('express');
 const sitemap = require('./sitemap.json');
 
-
-
 const router = express.Router();
 
 router.get('/:page', (req, res, next) => {

@@ -13,6 +13,10 @@
 			"url": "/",
 			"indent": 0
 		},{
+			"name": "Internationalisation",
+			"url": "/locales",
+			"indent": 0
+		},{
 			"name": "Subject content - A-level",
 			"url": "/docs/4",
 			"indent": 1
