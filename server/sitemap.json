@@ -17,6 +17,10 @@
 			"url": "/locales",
 			"indent": 0
 		},{
+			"name": "My Dream PC",
+			"url": "/docs/pc",
+			"indent": 0
+		},{
 			"name": "Subject content - A-level",
 			"url": "/docs/4",
 			"indent": 1
