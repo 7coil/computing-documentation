@@ -13,10 +13,6 @@
 			"url": "/",
 			"indent": 0
 		},{
-			"name": "Internationalisation",
-			"url": "/locales",
-			"indent": 0
-		},{
 			"name": "My Dream PC",
 			"url": "/docs/pc",
 			"indent": 0
@@ -26,63 +22,63 @@
 			"indent": 1
 		},{
 			"name": "Fundamentals of programming",
-			"url": "/docs/4.1",
+			"url": "/docs/4_1",
 			"indent": 2
 		},{
 			"name": "Fundamentals of data structures",
-			"url": "/docs/4.2",
+			"url": "/docs/4_2",
 			"indent": 2
 		},{
 			"name": "Fundamentals of algoritms",
-			"url": "/docs/4.3",
+			"url": "/docs/4_3",
 			"indent": 2
 		},{
 			"name": "Theory of computation",
-			"url": "/docs/4.4",
+			"url": "/docs/4_4",
 			"indent": 2
 		},{
 			"name": "Fundamentals of data representation",
-			"url": "/docs/4.5",
+			"url": "/docs/4_5",
 			"indent": 2
 		},{
 			"name": "Fundamentals of computer systems",
-			"url": "/docs/4.6",
+			"url": "/docs/4_6",
 			"indent": 2
 		},{
 			"name": "Logic gates",
-			"url": "/docs/4.6#4-6-4-logic-gates",
+			"url": "/docs/4_6#4-6-4-logic-gates",
 			"indent": 3
 		},{
 			"name": "Fundamentals of computer organisation and architecture",
-			"url": "/docs/4.7",
+			"url": "/docs/4_7",
 			"indent": 2
 		},{
 			"name": "Consequences of uses of computing",
-			"url": "/docs/4.8",
+			"url": "/docs/4_8",
 			"indent": 2
 		},{
 			"name": "Fundamentals of communication and networking",
-			"url": "/docs/4.9",
+			"url": "/docs/4_9",
 			"indent": 2
 		},{
 			"name": "Fundamentals of databases",
-			"url": "/docs/4.10",
+			"url": "/docs/4_10",
 			"indent": 2
 		},{
 			"name": "Big Data",
-			"url": "/docs/4.11",
+			"url": "/docs/4_11",
 			"indent": 2
 		},{
 			"name": "Fundamentals of functional programming",
-			"url": "/docs/4.12",
+			"url": "/docs/4_12",
 			"indent": 2
 		},{
 			"name": "Systematic approach to problem solving",
-			"url": "/docs/4.13",
+			"url": "/docs/4_13",
 			"indent": 2
 		},{
 			"name": "Non-exam assessment - the computing practical project",
-			"url": "/docs/4.14",
+			"url": "/docs/4_14",
 			"indent": 2
 		}
 	]

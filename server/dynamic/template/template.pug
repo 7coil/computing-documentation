@@ -1,31 +1,42 @@
 doctype html
 
 html
-	head
-		if title
-			title #{title} - #{__('name')}
-		else
-			title #{__('name')}
-		link(rel="stylesheet" href="/less/index.css")
-		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons")
-		link(rel="icon" href="favicon.png")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		script(async src="/js/nav.js")
-		script(async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML")
-		script(async src="/js/mathjax.js")
-	body
-		nav.main-b3
-			a(href="#" onclick="toggleNav()")
-				i.material-icons menu
-			.title
-				a(href="/"): h1 #{__('name')}
-		main
-			block content
-		footer.main-b4
-			p Copyright 2015 - 2018, Moustacheminer Server Services
-			p Unless stated, all content within this website is not licenced, and is under the public domain.
-			p The "#{__('name')}" software is licenced under the MIT Licence.
-		#sidedarken(onclick="toggleNav()")
-		#sidenav
-			for site in sitemap
-				a(href=site.url class=`indent${site.indent}`) #{site.name}
+	if !ajax
+		head
+			if title
+				title#title #{title} - Computing Documentation
+			else
+				title#title Computing Documentation
+			link(rel="stylesheet" href="/less/index.css")
+			link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons")
+			link(rel="icon" href="favicon.png")
+			meta(name="viewport" content="width=device-width, initial-scale=1")
+		body
+			nav.main-b3
+				a(href="#" onclick="toggleNav()")
+					i.material-icons menu
+				.title
+					a(href="/"): h1 Computing Documentation
+			main
+				.container
+					#content
+						block content
+			footer.main-b4
+				p Copyright 2015 - 2018, Moustacheminer Server Services
+				p Unless stated, all content within this website is not licenced, and is under the public domain.
+				p The Computing Documentation software is licenced under the MIT Licence.
+			#sidedarken(onclick="toggleNav()")
+			#sidenav
+				for site in sitemap
+					a(href=site.url class=`indent${site.indent}`) #{site.name}
+			script(src="/js/nav.js")
+			script(src="/js/ajax.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML")
+			script(src="/js/mathjax.js")
+	else
+		xml#info.hide
+			if title
+				header #{title} - Computing Documentation
+			else
+				header Computing Documentation
+		block content

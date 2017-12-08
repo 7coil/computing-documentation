@@ -1,3 +1,5 @@
+/* globals MathJax */
+
 MathJax.Hub.Config({
 	messageStyle: 'none',
 	tex2jax: {
